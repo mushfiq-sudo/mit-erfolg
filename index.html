@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>mit erfolg.de – Goethe-Zertifikat B2 Preparation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef6f7;--card:#ffffff;--ink:#0b2540;--mut:#587084;--line:#d6e5e9;--soft:#e4f3f4;
+  --teal:#0e9aa7;--teal-d:#0a7480;--navy:#0b2540;--ok:#15803d;--okbg:#dcfce7;--bad:#b91c1c;--badbg:#fee2e2;
+  --c-lesen:#0e9aa7;--c-hoeren:#6d5bd0;--c-schreiben:#d9811a;--c-sprechen:#2a9d5c;
+  --shadow:0 6px 24px rgba(11,37,64,.08);--r:16px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#07131f;--card:#0e2234;--ink:#e7f2f6;--mut:#93aab8;--line:#1c3a50;--soft:#12304a;--okbg:#0f3a22;--badbg:#4a1717;--ok:#4ade80;--bad:#f87171;--shadow:0 6px 24px rgba(0,0,0,.4);}}
+:root[data-theme="dark"]{
+  --bg:#07131f;--card:#0e2234;--ink:#e7f2f6;--mut:#93aab8;--line:#1c3a50;--soft:#12304a;--okbg:#0f3a22;--badbg:#4a1717;--ok:#4ade80;--bad:#f87171;--shadow:0 6px 24px rgba(0,0,0,.4);}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;font-size:16px}
+a{color:var(--teal-d);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:8px 14px;z-index:99}.skip:focus{left:8px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navy);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+.bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:10px 16px}
+.brand{font-weight:800;letter-spacing:.2px;color:#fff;display:flex;align-items:center;gap:8px;font-size:17px}
+.brand span.lg{background:var(--teal);width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:15px}
+.sp{flex:1}
+nav.links{display:none;gap:2px;flex-wrap:wrap}
+nav.links a,.mobmenu a{color:#d8ecf0;padding:8px 11px;border-radius:10px;font-size:14px;font-weight:500}
+nav.links a:hover,.mobmenu a:hover,nav.links a.on{background:rgba(255,255,255,.14);text-decoration:none;color:#fff}
+.ibtn{background:rgba(255,255,255,.12);border:0;color:#fff;width:38px;height:38px;border-radius:10px;font-size:17px;cursor:pointer}
+.mobmenu{display:none;flex-direction:column;padding:6px 12px 12px;max-width:1100px;margin:0 auto}.mobmenu.open{display:flex}
+@media(min-width:900px){nav.links{display:flex}#burger{display:none}.mobmenu,.mobmenu.open{display:none}}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 70px}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em}h2{font-size:22px;margin-top:1.6em}h3{font-size:17px}
+.hero{background:linear-gradient(135deg,#0b2540 0%,#0a5d73 55%,#0e9aa7 100%);color:#fff;border-radius:24px;padding:34px 22px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero:after{content:"B2";position:absolute;right:-6px;bottom:-34px;font-size:150px;font-weight:800;opacity:.09}
+.hero h1{font-size:clamp(28px,6vw,46px);font-weight:800;margin-bottom:.3em}
+.hero p{font-size:clamp(15px,3.6vw,19px);opacity:.92;max-width:600px;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;border:0;padding:11px 18px;border-radius:12px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{background:var(--teal-d);transform:translateY(-1px);text-decoration:none}
+.btn.big{padding:14px 26px;font-size:17px;background:#fff;color:#0b2540}.btn.big:hover{background:#e6fbfd}
+.btn.ghost{background:transparent;color:var(--teal-d);border:1.5px solid var(--line)}.btn.ghost:hover{background:var(--soft)}
+.btn.sm{padding:6px 12px;font-size:13px;border-radius:9px}.btn.danger{background:var(--bad)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.mcard{display:block;color:var(--ink);border-top:5px solid var(--mc);transition:transform .18s,box-shadow .18s}
+.mcard:hover{transform:translateY(-4px);text-decoration:none;box-shadow:0 12px 30px rgba(11,37,64,.16)}
+.mcard .ic{font-size:30px}.mcard h3{font-size:21px;color:var(--mc);margin:.2em 0}
+.meta{color:var(--mut);font-size:13.5px}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--soft);font-size:12.5px;font-weight:600;color:var(--teal-d)}
+.pill.warn{background:#fff1d6;color:#8a5200}.pill.demo{background:#fde7f3;color:#9d1b66}
+.prog{height:8px;background:var(--soft);border-radius:9px;overflow:hidden;margin-top:10px}.prog i{display:block;height:100%;background:var(--mc,var(--teal));border-radius:9px;transition:width .5s}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:5px 11px;border-radius:99px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.chip:hover{background:var(--soft);text-decoration:none}.chip.on{background:var(--mc,var(--teal));border-color:var(--mc,var(--teal));color:#fff}
+.crumb{font-size:14px;color:var(--mut);margin-bottom:10px}
+.pagehead{border-left:6px solid var(--mc,var(--teal));padding-left:14px;margin-bottom:16px}
+.pagehead h1{font-size:clamp(24px,5vw,34px);margin:0}
+.empty{border:2px dashed var(--line);border-radius:var(--r);padding:22px;text-align:center;color:var(--mut);background:var(--card)}
+.q{border-top:1px solid var(--line);padding:14px 0}.q:first-of-type{border-top:0}
+.qh{display:flex;gap:10px;justify-content:space-between;align-items:flex-start}.qn{font-weight:800;color:var(--mc,var(--teal))}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opt{display:flex;gap:10px;text-align:left;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink);font:inherit;cursor:pointer;transition:border-color .15s,background .15s}
+.opt b{background:var(--soft);min-width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px;color:var(--teal-d)}
+.opt:hover:not(:disabled){border-color:var(--mc,var(--teal))}
+.opt.sel{border-color:var(--mc,var(--teal));background:var(--soft)}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.opt:disabled{cursor:default}
+.expl{margin-top:8px;padding:10px 12px;border-radius:10px;background:var(--soft);font-size:14.5px}
+.passage{white-space:pre-wrap;background:var(--soft);border-radius:12px;padding:14px;margin:10px 0;font-size:16px}
+.instr{font-weight:600}
+.star{background:none;border:0;font-size:20px;cursor:pointer;color:var(--mut);padding:2px 6px}.star.on{color:#f5b301}
+.timer{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--navy);color:#fff;padding:12px 16px;border-radius:14px;margin:10px 0}
+.timer .tt{font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;min-width:96px}.timer .tt.warn{color:#ffb4b4}
+.timer .tl{font-size:13px;opacity:.85;flex:1 1 140px}.timer .tb{display:flex;gap:6px}
+.timer .btn.ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.seg button{border:0;background:transparent;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}.seg button.on{background:var(--teal);color:#fff}
+textarea,input[type=text],input[type=search],select{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+textarea{resize:vertical;min-height:120px}textarea.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;min-height:190px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:0 0 auto}.row .grow{flex:1 1 180px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mut);font-size:12.5px;text-transform:uppercase;letter-spacing:.4px}
+.tw{overflow-x:auto}
+.flip{perspective:700px;height:130px;border:0;background:none;padding:0;cursor:pointer;font:inherit;color:inherit}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}.flip.on .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:14px;padding:10px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);font-weight:700;font-size:19px;text-align:center}
+.flip .b{transform:rotateY(180deg);background:var(--teal);color:#fff;font-size:16px}
+.check{display:flex;gap:10px;align-items:flex-start;padding:6px 0}.check input{margin-top:5px;width:18px;height:18px;accent-color:var(--teal)}
+.big-num{font-size:44px;font-weight:800;color:var(--teal)}
+.note{border-left:4px solid var(--teal);background:var(--soft);padding:10px 14px;border-radius:0 12px 12px 0;font-size:14.5px}
+.note.w{border-color:#d9811a}
+.srcb{font-size:12px;font-weight:700;color:var(--mut)}
+pre.code{background:var(--navy);color:#d7f3f6;padding:14px;border-radius:12px;overflow-x:auto;font-size:12.5px;white-space:pre-wrap;word-break:break-word}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--navy);color:#fff;padding:10px 18px;border-radius:12px;z-index:50;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s;max-width:90vw;text-align:center}
+#toast.show{opacity:1}
+iframe.pdf{width:100%;height:78vh;border:1px solid var(--line);border-radius:12px;background:#fff}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media(max-width:560px){.hero{padding:26px 18px}.card{padding:14px}.timer .tt{font-size:26px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="#/" aria-label="Home"><span class="lg">🎓</span>mit erfolg.de</a>
+    <div class="sp"></div>
+    <nav class="links" id="nav" aria-label="Main"></nav>
+    <button class="ibtn" id="themeBtn" aria-label="Toggle dark mode" title="Dark / light">🌓</button>
+    <button class="ibtn" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+  <div class="mobmenu" id="mob"></div>
+</header>
+<main id="app" tabindex="-1"><noscript>This site needs JavaScript.</noscript></main>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- =================================================================
+     1) CONTENT DATA  (structure only – taken from the book's table of contents p.3
+        and exam overview p.6. NO book text is included here.)
+     ================================================================= -->
+<script id="book-data" type="application/json">
+{
+  "title": "Mit Erfolg zum Goethe-Zertifikat B2 – Testbuch",
+  "pdfOffset": 1,
+  "modelltests": [
+    {"n":1,"start":23,"lesen":24,"hoeren":33,"schreiben":37,"sprechen":38,"loesungen":41,"end":46},
+    {"n":2,"start":47,"lesen":48,"hoeren":57,"schreiben":61,"sprechen":63,"loesungen":66,"end":66},
+    {"n":3,"start":67,"lesen":68,"hoeren":77,"schreiben":81,"sprechen":83,"loesungen":86,"end":86},
+    {"n":4,"start":87,"lesen":88,"hoeren":97,"schreiben":101,"sprechen":103,"loesungen":106,"end":106}
+  ],
+  "back": {"Transkriptionen":107,"Antwortbögen":123,"Quellen":127,"Trackliste":128},
+  "modules": {
+    "lesen":   {"name":"Lesen","icon":"📖","en":"Reading","minutes":65,"points":"30 Messpunkte","teile":[
+      {"n":1,"goal":"Einstellungen, Meinungen, Haltungen verstehen","sug":18,"pts":9},
+      {"n":2,"goal":"Text verstehen und ergänzen","sug":12,"pts":6},
+      {"n":3,"goal":"Informationen und Argumente verstehen","sug":12,"pts":6},
+      {"n":4,"goal":"Standpunkte verstehen","sug":12,"pts":6},
+      {"n":5,"goal":"Regeln/Instruktionen verstehen (Sachtext)","sug":6,"pts":3}]},
+    "hoeren":  {"name":"Hören","icon":"🎧","en":"Listening","minutes":40,"points":"30 Messpunkte","teile":[
+      {"n":1,"goal":"Alltagsgespräche, Ankündigungen und Mitteilungen verstehen","pts":10},
+      {"n":2,"goal":"implizite Informationen verstehen","pts":6},
+      {"n":3,"goal":"subjektive Aussagen verstehen","pts":6},
+      {"n":4,"goal":"kurze Vorträge verstehen","pts":6}]},
+    "schreiben":{"name":"Schreiben","icon":"✍️","en":"Writing","minutes":75,"points":"100 Punkte","teile":[
+      {"n":1,"goal":"Detailverstehen (wie im Buch angegeben)","sug":50},
+      {"n":2,"goal":"auf ein Ereignis / eine Situation reagieren / persönliche Mitteilung verfassen","sug":25}]},
+    "sprechen":{"name":"Sprechen","icon":"🗣️","en":"Speaking","minutes":15,"points":"100 Punkte","teile":[
+      {"n":1,"goal":"vor Publikum sprechen","speak":4,"note":"4 Minuten pro Teilnehmer/in"},
+      {"n":2,"goal":"Argumente pro und kontra erörtern","speak":5,"note":"5 Minuten für beide Teilnehmenden zusammen"}]}
+  },
+  "conversion": {"30":100,"29":97,"28":93,"27":90,"26":87,"25":83,"24":80,"23":77,"22":73,"21":70,"20":67,"19":63,"18":60,"17":57,"16":53,"15":50,"14":47,"13":43,"12":40,"11":37,"10":33,"9":30,"8":27,"7":23,"6":20,"5":17,"4":13,"3":10,"2":7,"1":3,"0":0}
+}
+</script>
+
+<!-- Demo exercises: original, written for testing the features. NOT from the book. -->
+<script id="demo-data" type="application/json">
+{"tasks":[
+ {"id":"demo-lesen-1","mt":0,"module":"lesen","teil":1,"demo":true,"title":"Demo: kurzer Blogtext",
+  "instruction":"Lesen Sie den Text und wählen Sie die richtige Antwort.",
+  "text":"Lena wohnt seit drei Monaten in Hamburg. Am Anfang hat sie sich einsam gefühlt, aber jetzt geht sie jede Woche zu einem Lesekreis. Dort hat sie viele neue Freunde gefunden.",
+  "questions":[
+   {"n":1,"q":"Wie hat sich Lena am Anfang in Hamburg gefühlt?","options":["glücklich","einsam","müde"],"answer":1,"explanation":"Im Text steht: „sich einsam gefühlt“."},
+   {"n":2,"q":"Was macht Lena jede Woche?","options":["Sie fährt nach Berlin.","Sie geht zu einem Lesekreis.","Sie besucht ihre Eltern."],"answer":1,"explanation":"„jede Woche zu einem Lesekreis“."}]},
+ {"id":"demo-hoeren-1","mt":0,"module":"hoeren","teil":1,"demo":true,"title":"Demo: Hören (Audio selbst zuordnen)",
+  "instruction":"Attach any audio file with the button, listen, then answer.",
+  "transcript":"(Demo) Der Zug nach München fährt heute von Gleis 5 ab.",
+  "questions":[{"n":1,"q":"Von welchem Gleis fährt der Zug?","options":["Gleis 3","Gleis 5","Gleis 8"],"answer":1,"explanation":"Demo-Erklärung."}]},
+ {"id":"demo-schreiben-1","mt":0,"module":"schreiben","teil":1,"demo":true,"title":"Demo: Forumsbeitrag",
+  "prompt":"Schreiben Sie einen kurzen Beitrag für ein Forum: Was machen Sie gern in Ihrer Freizeit und warum?"},
+ {"id":"demo-sprechen-1","mt":0,"module":"sprechen","teil":2,"demo":true,"title":"Demo: Pro und Kontra",
+  "prompt":"Thema: Sollte man in der Stadt oder auf dem Land wohnen? Nennen Sie Argumente dafür und dagegen."}
+]}
+</script>
+
+<script>
+'use strict';
+/* =================================================================
+   2) SCORING LOGIC  (separate from UI)
+   ================================================================= */
+const BOOK = JSON.parse(document.getElementById('book-data').textContent);
+const DEMO = JSON.parse(document.getElementById('demo-data').textContent).tasks;
+const MODS = BOOK.modules, MODKEYS = ['lesen','hoeren','schreiben','sprechen'];
+
+const Scoring = {
+  // answer may be 0-based index or a letter ("a","b",…); returns index or null (= no key available)
+  key(q){const a=q.answer;if(a==null||a==='')return null;if(typeof a==='number')return a;
+    const s=String(a).trim().toLowerCase();if(/^[a-z]$/.test(s))return s.charCodeAt(0)-97;const i=parseInt(s,10);return isNaN(i)?null:i;},
+  summary(tasks,ans){let c=0,keyed=0,answered=0,total=0;
+    tasks.forEach(t=>(t.questions||[]).forEach((q,qi)=>{total++;const k=Scoring.key(q),s=(ans[t.id]||{})[qi];
+      if(s!=null)answered++;if(k!=null){keyed++;if(s===k)c++;}}));
+    return {correct:c,keyed,answered,total};},
+  // official conversion only if all 30 questions have a key (1 Messpunkt each – assumption stated in UI)
+  official(mod,sum){if((mod!=='lesen'&&mod!=='hoeren')||sum.total!==30||sum.keyed!==30)return null;
+    return {messpunkte:sum.correct,ergebnis:BOOK.conversion[String(sum.correct)],passed:sum.correct>=18};},
+  pages(mt,mod){const m=BOOK.modelltests[mt-1];if(!m)return null;
+    const order=['lesen','hoeren','schreiben','sprechen','loesungen'];const i=order.indexOf(mod);
+    return {from:m[mod],to:(i<order.length-1?m[order[i+1]]-1:m.end)};}
+};
+
+/* =================================================================
+   3) STORE (localStorage, with in-memory fallback)
+   ================================================================= */
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
+          set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const S=Object.assign({answers:{},checked:{},exam:{},results:[],bookmarks:[],done:{},writing:{},checks:{},notes:{},vocab:[],theme:null},LS.get('gb2.state',{}));
+let C=LS.get('gb2.content',{tasks:[]}); if(!Array.isArray(C.tasks))C.tasks=[];
+const save=()=>LS.set('gb2.state',S), saveC=()=>LS.set('gb2.content',C);
+const allTasks=()=>DEMO.concat(C.tasks);
+const tasksFor=(mt,mod,teil)=>allTasks().filter(t=>t.mt===mt&&t.module===mod&&(teil==null||t.teil===teil));
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=(s,e)=>(e||document).querySelector(s);
+const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+const modColor=m=>'var(--c-'+m+')';
+const AUDIO={}, RECS={}; let PDF={url:null,name:'',page:null}; let REC=null; const FLIPPED=new Set();
+
+/* =================================================================
+   4) UI HELPERS
+   ================================================================= */
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('show'),2800);}
+function copyText(txt,msg){const done=()=>toast(msg||'Copied');
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>fallback());}else fallback();
+  function fallback(){try{const ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();ok?done():toast('Copy blocked – select the text manually');}catch(e){toast('Copy blocked – select the text manually');}}}
+function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=880;g.gain.value=.15;o.start();setTimeout(()=>{o.stop();a.close()},700);}catch(e){}}
+const TM={};
+function tm(id,secs,label){const t=TM[id]||(TM[id]={left:secs,total:secs,run:false});t.label=label||t.label||'';return t;}
+function timerHTML(id,label,secs){const t=tm(id,secs,label);
+  return `<div class="timer"><div class="tl">⏱ ${esc(label)}</div><div class="tt${t.left<=60&&t.total>120?' warn':''}" data-timer="${id}">${fmt(t.left)}</div>
+  <div class="tb"><button class="btn sm" data-act="tstart" data-id="${id}">${t.run?'Pause':(t.left<t.total&&t.left>0?'Resume':'Start')}</button><button class="btn sm ghost" data-act="treset" data-id="${id}">Reset</button></div></div>`;}
+setInterval(()=>{let fin=false;for(const id in TM){const t=TM[id];if(t.run&&t.left>0){t.left--;if(t.left===0){t.run=false;fin=true;beep();toast('⏰ Time is up: '+t.label);}}}
+  document.querySelectorAll('[data-timer]').forEach(el=>{const t=TM[el.dataset.timer];if(t){el.textContent=fmt(t.left);el.classList.toggle('warn',t.left<=60&&t.total>120);}});
+  if(fin)render(true);},1000);
+
+/* =================================================================
+   5) COMPONENT RENDERERS
+   ================================================================= */
+function pdfBtn(printed,label){return `<button class="btn sm ghost" data-act="pdfgo" data-p="${printed}">📄 ${esc(label||('Book p. '+printed))}</button>`;}
+function pagesLabel(mt,mod){const p=Scoring.pages(mt,mod);return p?(p.from===p.to?'p. '+p.from:'pp. '+p.from+'–'+p.to):'';}
+function doneTask(t){if(t.questions)return !!S.checked[t.id]||!!(S.exam[t.mt+'-'+t.module]||{}).submitted;return !!S.done[t.id];}
+function moduleProgress(mod){const ts=allTasks().filter(t=>t.module===mod&&!t.demo);return {n:ts.length,d:ts.filter(doneTask).length};}
+function slotsFilled(){let f=0,tot=0;BOOK.modelltests.forEach(m=>MODKEYS.forEach(k=>MODS[k].teile.forEach(te=>{tot++;if(tasksFor(m.n,k,te.n).length)f++;})));return {f,tot};}
+const ansStore=ctx=>ctx==='p'?S.answers:((S.exam[ctx.slice(2)]=S.exam[ctx.slice(2)]||{ans:{},submitted:false}).ans);
+
+function questionHTML(t,q,qi,ctx,reveal){
+  const ans=ansStore(ctx),sel=(ans[t.id]||{})[qi],k=Scoring.key(q),bk=t.id+':'+qi,bm=S.bookmarks.includes(bk);
+  const opts=(q.options||[]).map((o,oi)=>{let c='opt';if(sel===oi)c+=' sel';if(reveal&&k!=null){if(oi===k)c+=' ok';else if(sel===oi)c+=' bad';}
+    return `<button class="${c}" data-act="pick" data-ctx="${ctx}" data-t="${esc(t.id)}" data-q="${qi}" data-o="${oi}" aria-pressed="${sel===oi}" ${reveal?'disabled':''}><b>${String.fromCharCode(97+oi)}</b><span>${esc(o)}</span></button>`;}).join('');
+  let fb='';if(reveal){if(k==null)fb='<div class="expl">No answer key available for this question.</div>';
+    else fb=`<div class="expl">${sel===k?'✅ Correct.':(sel==null?'⚠️ Not answered.':'❌ Not correct.')} Answer: <b>${String.fromCharCode(97+k)}</b>${q.explanation?' – '+esc(q.explanation):''}</div>`;}
+  return `<div class="q"><div class="qh"><div><span class="qn">${esc(q.n!=null?q.n:qi+1)}.</span> ${esc(q.q||'')}</div>
+    <button class="star${bm?' on':''}" data-act="bm" data-k="${esc(bk)}" aria-label="Bookmark question" title="Bookmark">${bm?'★':'☆'}</button></div>
+    <div class="opts">${opts}</div>${fb}</div>`;
+}
+
+function audioBlock(t){
+  const src=AUDIO[t.id]||(/\.(mp3|m4a|ogg|wav)$/i.test(t.audio||'')?t.audio:null);
+  return `<div class="note w" style="margin:10px 0">🎧 ${t.audio&&!src?'Book audio: <b>'+esc(t.audio)+'</b>. ':''}
+   ${src?`<audio controls preload="metadata" src="${esc(src)}" id="au-${esc(t.id)}" style="width:100%;margin:6px 0"></audio>
+   <div class="row"><button class="btn sm ghost" data-act="aseek" data-t="${esc(t.id)}" data-d="-10">⟲ 10 s</button><button class="btn sm ghost" data-act="aseek" data-t="${esc(t.id)}" data-d="0">⏮ Replay</button>
+   <label class="meta">Speed <select data-change="arate" data-t="${esc(t.id)}" style="width:auto;padding:4px 8px"><option>0.75</option><option selected>1</option><option>1.25</option></select></label></div>`
+   :'No audio attached yet – this needs your authorized audio file. '}
+   <div style="margin-top:6px"><label class="btn sm ghost" style="cursor:pointer">📎 ${src?'Replace':'Attach'} audio file<input type="file" accept="audio/*" data-change="aattach" data-t="${esc(t.id)}" hidden></label></div></div>`;
+}
+
+function taskHTML(t,ctx,reveal){
+  const m=MODS[t.module];let h=`<article class="card" style="--mc:${modColor(t.module)};margin-top:14px" id="task-${esc(t.id)}">
+  <div class="row"><span class="pill">${m.icon} ${m.name} · Teil ${t.teil}</span>${t.demo?'<span class="pill demo">Demo – not from the book</span>':'<span class="pill">Your imported content</span>'}</div>
+  <h3 style="margin-top:8px">${esc(t.title||(m.name+' Teil '+t.teil))}</h3>`;
+  if(t.instruction)h+=`<p class="instr">${esc(t.instruction)}</p>`;
+  if(t.module==='hoeren')h+=audioBlock(t);
+  if(t.text)h+=`<div class="passage">${esc(t.text)}</div>`;
+  if(t.prompt)h+=`<div class="passage">${esc(t.prompt)}</div>`;
+  (t.questions||[]).forEach((q,qi)=>{h+=questionHTML(t,q,qi,ctx,reveal);});
+  if(t.module==='hoeren'&&t.transcript&&reveal)h+=`<details class="expl"><summary><b>Transcript</b></summary><div class="passage">${esc(t.transcript)}</div></details>`;
+  if(t.questions&&ctx==='p'){const s=Scoring.summary([t],S.answers);
+    h+=`<div class="row" style="margin-top:12px">${S.checked[t.id]?`<span class="pill">${s.correct}/${s.keyed||s.total} correct</span><button class="btn sm ghost" data-act="uncheck" data-t="${esc(t.id)}">Try again</button>`
+     :`<button class="btn sm" data-act="check" data-t="${esc(t.id)}">Check answers</button>`}</div>`;}
+  if(!t.questions&&ctx==='p')h+=`<div class="row"><button class="btn sm ${S.done[t.id]?'ghost':''}" data-act="done" data-t="${esc(t.id)}">${S.done[t.id]?'✓ Done (undo)':'Mark as done'}</button></div>`;
+  return h+'</article>';
+}
+
+const EXPRESS={
+  'Presenting (Teil 1)':['Ich möchte Ihnen heute das Thema … vorstellen.','Zuerst möchte ich auf … eingehen.','Ein weiterer wichtiger Punkt ist …','Zum Schluss fasse ich kurz zusammen: …','Vielen Dank für Ihre Aufmerksamkeit.'],
+  'Discussing (Teil 2)':['Ich bin der Meinung, dass …','Da stimme ich Ihnen (nicht) zu, weil …','Einerseits …, andererseits …','Das ist ein guter Punkt, aber …','Ich sehe das anders, denn …','Könnten Sie das bitte genauer erklären?']};
+const CHECKS={
+  schreiben:['I answered every point of the task','Greeting / closing fit the text type','Clear structure with paragraphs and linking words (z. B. deshalb, außerdem, trotzdem)','Verb position, cases and endings checked','Varied vocabulary (no repeated words)','Spelling and punctuation checked','Length is appropriate for the task']};
+
+function writingTool(mt,teil){
+  const key=mt+'-'+teil,txt=S.writing[key]||'',tasks=tasksFor(mt,'schreiben',teil);
+  const wc=txt.trim()?txt.trim().split(/\s+/).length:0;
+  let h=`<section class="card" style="--mc:var(--c-schreiben);margin-top:14px"><h3>Writing area – Teil ${teil}</h3>`;
+  if(tasks.length)tasks.forEach(t=>{h+=`<p class="instr">${esc(t.title||'')}</p>${t.instruction?`<p>${esc(t.instruction)}</p>`:''}<div class="passage">${esc(t.prompt||t.text||'')}</div>`;});
+  else h+=`<div class="note w">Task text not added yet. Open the book page in the PDF viewer, or add your own text under “Content”.</div>`;
+  h+=`<textarea class="ed" data-bind="writing" data-key="${key}" rows="12" aria-label="Your text" placeholder="Schreiben Sie hier …" spellcheck="true" lang="de">${esc(txt)}</textarea>
+  <div class="row" style="margin-top:8px"><span class="pill" id="wc-${key}">${wc} words</span>
+  <button class="btn sm ghost" data-act="aifb" data-key="${key}">🤖 Copy text + AI-feedback prompt</button></div>
+  <p class="meta">AI feedback is <b>supplementary</b> and not an official rating. Paste the copied text into a Claude chat to get comments on grammar, vocabulary, coherence and task completion.</p>
+  <h3 style="margin-top:16px">Self-review checklist</h3>`;
+  CHECKS.schreiben.forEach((c,i)=>{const id=key+':'+i;h+=`<label class="check"><input type="checkbox" data-change="chk" data-id="${id}" ${S.checks[id]?'checked':''}><span>${esc(c)}</span></label>`;});
+  return h+'</section>';
+}
+function speakingTool(mt,teil){
+  const key=mt+'-'+teil,te=MODS.sprechen.teile[teil-1],tasks=tasksFor(mt,'sprechen',teil);
+  let h=`<section class="card" style="--mc:var(--c-sprechen);margin-top:14px"><h3>Speaking practice – Teil ${teil}: ${esc(te.goal)}</h3><p class="meta">${esc(te.note)} · Vorbereitung: 15 Minuten</p>`;
+  if(tasks.length)tasks.forEach(t=>{h+=`<p class="instr">${esc(t.title||'')}</p>${t.instruction?`<p>${esc(t.instruction)}</p>`:''}<div class="passage">${esc(t.prompt||t.text||'')}</div>`;});
+  else h+=`<div class="note w">Topic not added yet. Open the book page in the PDF viewer, or add your own topic under “Content”.</div>`;
+  h+=`<div class="grid g2">${timerHTML('prep-'+key,'Preparation (15 min)',900)}${timerHTML('speak-'+key,'Speaking (Teil '+teil+')',te.speak*60)}</div>
+  <h3>Notes</h3><textarea data-bind="notes" data-key="${key}" rows="6" aria-label="Notes" placeholder="Stichpunkte …" lang="de">${esc(S.notes[key]||'')}</textarea>
+  <h3 style="margin-top:16px">Useful expressions <span class="srcb">(extra material, not from the book)</span></h3>`;
+  const grp=teil===1?'Presenting (Teil 1)':'Discussing (Teil 2)';
+  h+=`<ul>${EXPRESS[grp].map(e=>`<li lang="de">${esc(e)}</li>`).join('')}</ul><h3>Voice recording (optional)</h3>`;
+  if(window.MediaRecorder&&navigator.mediaDevices){const r=REC&&REC.id===key;
+    h+=`<div class="row"><button class="btn sm ${r?'danger':''}" data-act="${r?'recstop':'recstart'}" data-key="${key}">${r?'⏹ Stop':'⏺ Record'}</button>${RECS[key]?`<audio controls src="${RECS[key]}"></audio>`:''}</div><p class="meta">Recordings stay on your device and are lost when you close the page.</p>`;}
+  else h+='<p class="meta">Recording is not supported in this browser.</p>';
+  return h+'</section>';
+}
+
+/* =================================================================
+   6) VIEWS
+   ================================================================= */
+const NAV=[['#/','Home'],['#/dash','Dashboard'],['#/search','Search'],['#/bm','Bookmarks'],['#/vocab','Vocabulary'],['#/pdf','PDF'],['#/content','Content'],['#/help','Tips & Help']];
+function renderNav(){const cur=location.hash||'#/';const h=NAV.map(n=>`<a href="${n[0]}" class="${cur===n[0]?'on':''}">${n[1]}</a>`).join('');$('#nav').innerHTML=h;$('#mob').innerHTML=h;}
+
+function viewHome(){
+  const sf=slotsFilled();
+  let h=`<section class="hero"><h1>Goethe-Zertifikat B2 Preparation</h1><p>Your Interactive German Exam Practice Platform</p>
+  <a class="btn big" href="#modules" data-act="scrollmods">Start Learning →</a></section>
+  <h2 id="modules">Exam modules</h2><div class="grid g4">`;
+  MODKEYS.forEach(k=>{const m=MODS[k],p=moduleProgress(k);h+=`<a class="card mcard" style="--mc:${modColor(k)}" href="#/m/${k}"><div class="ic">${m.icon}</div><h3>${m.name}</h3>
+    <div class="meta">${esc(m.en)} · ${m.minutes} ${k==='sprechen'?'min preparation per Teil':'minutes'} · ${m.teile.length} Teile</div>
+    <div class="prog"><i style="width:${p.n?Math.round(p.d/p.n*100):0}%"></i></div><div class="meta" style="margin-top:4px">${p.n?p.d+' / '+p.n+' tasks done':'No content imported yet'}</div></a>`;});
+  h+=`</div><h2>Modelltests</h2><div class="grid g4">`;
+  BOOK.modelltests.forEach(m=>{h+=`<div class="card"><h3>Modelltest ${m.n}</h3><div class="meta">Book pp. ${m.start}–${m.end}</div><div class="chips">`+
+    MODKEYS.map(k=>{const n=tasksFor(m.n,k).length;return `<a class="chip" href="#/t/${m.n}/${k}" style="--mc:${modColor(k)}">${MODS[k].icon} ${MODS[k].name}${n?' · '+n:''}</a>`;}).join('')+
+    `</div><div style="margin-top:12px"><a class="btn sm" href="#/t/${m.n}">Open test</a></div></div>`;});
+  h+=`</div><p style="margin-top:12px"><a class="pill demo" href="#/t/0">Demo exercises (not from the book) – try all features</a></p>
+  <h2>Progress</h2><div class="grid g3"><div class="card"><div class="big-num">${sf.f}<span class="meta"> / ${sf.tot}</span></div><div class="meta">Teile with content (4 Modelltests)</div><div class="prog"><i style="width:${Math.round(sf.f/sf.tot*100)}%"></i></div></div>
+  <div class="card"><div class="big-num">${S.results.length}</div><div class="meta">Submitted test sections</div></div>
+  <div class="card"><div class="big-num">${S.bookmarks.length}</div><div class="meta">Bookmarked questions · <a href="#/bm">open</a></div></div></div>
+  <h2>Exam tips</h2><div class="grid g3">
+  <div class="card"><h3>📌 Pass mark</h3><p>Lesen &amp; Hören: 18 of 30 Messpunkte (60 %). <span class="srcb">Source: book p. 6</span></p></div>
+  <div class="card"><h3>⏱ Plan your time</h3><p>Lesen 65 min, Hören 40 min, Schreiben 75 min. Use the timers in every Modelltest.</p></div>
+  <div class="card"><h3>🔁 Practise, then review</h3><p>First try without help, then check answers and bookmark the questions that were hard.</p></div></div>
+  <p><a href="#/help">More tips and help →</a></p>`;
+  return h;
+}
+
+function viewModule(k){
+  const m=MODS[k];if(!m)return viewNotFound();
+  let h=`<div class="crumb"><a href="#/">Home</a> › ${m.name}</div><div class="pagehead" style="--mc:${modColor(k)}"><h1>${m.icon} ${m.name}</h1><div class="meta">${esc(m.en)} · ${m.minutes} ${k==='sprechen'?'min preparation per Teil':'minutes'} · ${esc(m.points)}</div></div>
+  <div class="card tw"><table><thead><tr><th>Teil</th><th>Goal (from the book)</th><th>${k==='sprechen'?'Speaking time':'Suggested time'}</th><th>${k==='schreiben'?'':'Points'}</th></tr></thead><tbody>`;
+  m.teile.forEach(t=>{h+=`<tr><td><b>${t.n}</b></td><td>${esc(t.goal)}</td><td>${k==='sprechen'?esc(t.note):(t.sug?t.sug+' min':'–')}</td><td>${t.pts!=null?t.pts:''}</td></tr>`;});
+  h+=`</tbody></table></div><h2>Practise by Modelltest</h2><div class="grid g4">`;
+  BOOK.modelltests.forEach(t=>{const n=tasksFor(t.n,k).length;h+=`<a class="card mcard" style="--mc:${modColor(k)}" href="#/t/${t.n}/${k}"><h3>Modelltest ${t.n}</h3><div class="meta">Book ${pagesLabel(t.n,k)}</div><p>${n?n+' task(s) loaded':'<span class="pill warn">content missing</span>'}</p></a>`;});
+  return h+'</div>';
+}
+
+function viewTest(n){
+  const m=n===0?{n:0}:BOOK.modelltests[n-1];if(!m)return viewNotFound();
+  let h=`<div class="crumb"><a href="#/">Home</a> › Modelltest ${n||'Demo'}</div><div class="pagehead"><h1>${n?'Modelltest '+n:'Demo exercises'}</h1><div class="meta">${n?'Book pp. '+m.start+'–'+m.end+' · solutions p. '+m.loesungen:'Original practice items written for this website – not from the book.'}</div></div><div class="grid g2">`;
+  MODKEYS.forEach(k=>{const ts=tasksFor(n,k),p=n?pagesLabel(n,k):'';const ex=S.exam[n+'-'+k];
+    h+=`<a class="card mcard" style="--mc:${modColor(k)}" href="#/t/${n}/${k}"><div class="ic">${MODS[k].icon}</div><h3>${MODS[k].name}</h3><div class="meta">${p?'Book '+p+' · ':''}${MODS[k].minutes} ${k==='sprechen'?'min prep':'min'}</div>
+    <p>${ts.length?ts.length+' task(s) loaded':'<span class="pill warn">content missing</span>'} ${ex&&ex.submitted?'<span class="pill">submitted</span>':''}</p></a>`;});
+  return h+'</div>'+(n?`<div class="note" style="margin-top:14px">Solutions in the book: p. ${m.loesungen}. Transcripts start on p. ${BOOK.back.Transkriptionen}, answer sheets on p. ${BOOK.back['Antwortbögen']}, track list on p. ${BOOK.back.Trackliste}.</div>`:'');
+}
+
+let UI={key:'',mode:'practice',teil:1,screen:'work'};
+function viewTestModule(n,k,teilArg){
+  const book=n===0?null:BOOK.modelltests[n-1];const m=MODS[k];if(!m||(n!==0&&!book))return viewNotFound();
+  const key=n+'-'+k,rk=location.hash;
+  if(UI.key!==rk){UI={key:rk,mode:'practice',teil:teilArg||1,screen:'work'};}
+  const ex=S.exam[key]||(S.exam[key]={ans:{},submitted:false});
+  const scored=(k==='lesen'||k==='hoeren');
+  let h=`<div class="crumb"><a href="#/">Home</a> › <a href="#/t/${n}">Modelltest ${n||'Demo'}</a> › ${m.name}</div>
+  <div class="pagehead" style="--mc:${modColor(k)}"><h1>${m.icon} ${m.name} – ${n?'Modelltest '+n:'Demo'}</h1>
+  <div class="row"><span class="meta">${n?'Book '+pagesLabel(n,k):''}</span>${n?pdfBtn(book[k],'Open in PDF viewer'):''}</div></div><div style="--mc:${modColor(k)}">`;
+  // Teil navigation
+  h+=`<div class="chips" role="tablist" aria-label="Teile">`+m.teile.map(t=>{const c=tasksFor(n,k,t.n).length;return `<button class="chip${UI.teil===t.n?' on':''}" data-act="teil" data-n="${t.n}">Teil ${t.n}${c?' · '+c:''}</button>`;}).join('')+`</div>`;
+  if(scored){
+    h+=`<div class="row" style="margin-top:14px"><div class="seg" role="group" aria-label="Mode"><button class="${UI.mode==='practice'?'on':''}" data-act="mode" data-m="practice">Practice</button><button class="${UI.mode==='exam'?'on':''}" data-act="mode" data-m="exam">Exam mode</button></div></div>`;
+    if(UI.mode==='exam')h+=timerHTML('exam-'+key,m.name+' – '+m.minutes+' minutes',m.minutes*60);
+  }
+  const te=m.teile[UI.teil-1];
+  if(te)h+=`<div class="note" style="margin-top:10px"><b>Teil ${te.n}:</b> ${esc(te.goal)}${te.sug?' · suggested '+te.sug+' min':''}${te.pts!=null?' · '+te.pts+' points':''}</div>`;
+
+  if(k==='schreiben'){h+=timerHTML('write-'+key,'Writing – 75 minutes total (suggested: Teil 1 = 50, Teil 2 = 25)',75*60)+writingTool(n,UI.teil)+tasksFor(n,k,UI.teil).filter(t=>t.questions).map(t=>taskHTML(t,'p',!!S.checked[t.id])).join('');return h+'</div>';}
+  if(k==='sprechen'){h+=speakingTool(n,UI.teil);return h+'</div>';}
+
+  const exam=UI.mode==='exam';
+  const ctx=exam?'e:'+key:'p';
+  if(exam&&ex.submitted)return h+resultHTML(n,k,ex)+'</div>';
+  if(exam&&UI.screen==='review')return h+reviewHTML(n,k,ex)+'</div>';
+
+  const ts=tasksFor(n,k,UI.teil);
+  if(!ts.length)h+=`<div class="empty" style="margin-top:14px">No content for ${m.name} Teil ${UI.teil} yet.<br>${n?'Open '+pagesLabel(n,k)+' in the PDF viewer, and add your authorized tasks under <a href="#/content">Content</a>.':''}</div>`;
+  ts.forEach(t=>{h+=exam?taskHTML(t,ctx,false):taskHTML(t,'p',!!S.checked[t.id]);});
+  if(exam){const last=UI.teil>=m.teile.length;
+    h+=`<div class="row" style="margin-top:16px">${UI.teil>1?`<button class="btn ghost" data-act="teil" data-n="${UI.teil-1}">← Teil ${UI.teil-1}</button>`:''}${!last?`<button class="btn" data-act="teil" data-n="${UI.teil+1}">Teil ${UI.teil+1} →</button>`:''}<button class="btn" data-act="review">Review &amp; submit</button></div>`;}
+  return h+'</div>';
+}
+function examTasks(n,k){return allTasks().filter(t=>t.mt===n&&t.module===k&&t.questions);}
+function reviewHTML(n,k,ex){
+  const m=MODS[k],ts=examTasks(n,k);let h=`<section class="card" style="margin-top:14px"><h3>Review before submitting</h3>`;
+  if(!ts.length)h+='<p>No tasks with questions are loaded for this module, so there is nothing to submit.</p>';
+  m.teile.forEach(te=>{const tt=ts.filter(t=>t.teil===te.n);if(!tt.length)return;let tot=0,ans=0,miss=[];
+    tt.forEach(t=>(t.questions||[]).forEach((q,qi)=>{tot++;if(((ex.ans[t.id]||{})[qi])!=null)ans++;else miss.push(q.n!=null?q.n:qi+1);}));
+    h+=`<div class="row" style="padding:8px 0;border-top:1px solid var(--line)"><b>Teil ${te.n}</b><span class="pill">${ans}/${tot} answered</span>${miss.length?`<span class="meta grow">Open: ${miss.join(', ')}</span>`:'<span class="meta grow">All answered ✓</span>'}<button class="btn sm ghost" data-act="teil" data-n="${te.n}" data-back="1">Go to Teil</button></div>`;});
+  return h+`<div class="row" style="margin-top:14px"><button class="btn ghost" data-act="backwork">← Back</button><button class="btn" data-act="submit" ${ts.length?'':'disabled'}>Submit exam section</button></div></section>`;
+}
+function resultHTML(n,k,ex){
+  const ts=examTasks(n,k),sum=Scoring.summary(ts,ex.ans),off=Scoring.official(k,sum),pct=sum.keyed?Math.round(sum.correct/sum.keyed*100):0;
+  let h=`<section class="card" style="margin-top:14px" aria-live="polite"><h3>Result</h3><div class="big-num">${sum.correct}<span class="meta"> / ${sum.keyed||sum.total} correct</span></div>
+  <div class="prog"><i style="width:${pct}%"></i></div><p class="meta">${pct}% of the questions that have an answer key${sum.keyed<sum.total?' ('+(sum.total-sum.keyed)+' question(s) without key were not scored)':''}.</p>`;
+  if(off)h+=`<div class="note"><b>${off.messpunkte}</b> Messpunkte → <b>${off.ergebnis}</b> Ergebnispunkte (book table, p. 6). ${off.passed?'✅ At or above the pass mark (18 Messpunkte / 60).':'❌ Below the pass mark (18 Messpunkte / 60).'}<br><span class="meta">Assumes 1 Messpunkt per question for all 30 questions.</span></div>`;
+  else h+=`<div class="note w">An official score is only shown when all 30 questions of Lesen / Hören are loaded with answer keys. This is a practice score only.</div>`;
+  h+=`<div class="row" style="margin-top:12px"><button class="btn ghost" data-act="retake">Start again</button></div></section>`;
+  ts.forEach(t=>{h+=taskHTML(t,'e:'+n+'-'+k,true);});return h;
+}
+
+function viewDash(){
+  const sf=slotsFilled();let h=`<div class="pagehead"><h1>📊 Dashboard</h1><div class="meta">Stored only in this browser.</div></div><div class="grid g4">`;
+  MODKEYS.forEach(k=>{const p=moduleProgress(k);h+=`<div class="card" style="--mc:${modColor(k)}"><h3>${MODS[k].icon} ${MODS[k].name}</h3><div class="big-num">${p.d}<span class="meta"> / ${p.n}</span></div><div class="meta">tasks completed</div><div class="prog"><i style="width:${p.n?Math.round(p.d/p.n*100):0}%"></i></div></div>`;});
+  h+=`</div><h2>Content coverage</h2><div class="card tw"><table><thead><tr><th>Modelltest</th>${MODKEYS.map(k=>`<th>${MODS[k].name}</th>`).join('')}</tr></thead><tbody>`;
+  BOOK.modelltests.forEach(m=>{h+=`<tr><td><b>${m.n}</b></td>`+MODKEYS.map(k=>{const f=MODS[k].teile.filter(te=>tasksFor(m.n,k,te.n).length).length;return `<td>${f} / ${MODS[k].teile.length} Teile</td>`;}).join('')+'</tr>';});
+  h+=`</tbody></table><p class="meta">${sf.f} of ${sf.tot} Teile have content. Add more under <a href="#/content">Content</a>.</p></div><h2>Recent results</h2>`;
+  if(!S.results.length)h+='<div class="empty">No submitted exam sections yet.</div>';
+  else h+=`<div class="card tw"><table><thead><tr><th>When</th><th>Section</th><th>Score</th><th>Official</th></tr></thead><tbody>`+S.results.slice(0,12).map(r=>`<tr><td>${esc(r.date)}</td><td>MT ${r.mt} · ${esc(MODS[r.mod].name)}</td><td>${r.c}/${r.keyed||r.total}</td><td>${r.ep!=null?r.ep+' Ergebnispunkte':'–'}</td></tr>`).join('')+'</tbody></table></div>';
+  h+=`<h2>Backup</h2><div class="card"><p class="meta">Your progress lives in this browser only. Copy a backup to keep it safe or move it to another device.</p><div class="row"><button class="btn sm" data-act="exportstate">Copy progress backup</button><button class="btn sm ghost" data-act="resetstate">Reset progress</button></div><textarea class="mono" id="bk" placeholder="Paste a backup here and press Restore" style="margin-top:10px;min-height:90px"></textarea><div style="margin-top:8px"><button class="btn sm ghost" data-act="importstate">Restore backup</button></div></div>`;
+  return h;
+}
+
+function viewBookmarks(){
+  let h='<div class="pagehead"><h1>★ Bookmarks</h1><div class="meta">Questions you marked as difficult.</div></div>';
+  const items=S.bookmarks.map(b=>{const [id,qi]=b.split(':');const t=allTasks().find(x=>x.id===id);return t&&(t.questions||[])[+qi]?{b,t,q:t.questions[+qi],qi:+qi}:null;}).filter(Boolean);
+  if(!items.length)return h+'<div class="empty">No bookmarks yet. Tap ☆ next to any question.</div>';
+  return h+items.map(({b,t,q})=>`<div class="card" style="margin-top:12px;--mc:${modColor(t.module)}"><span class="pill">${MODS[t.module].icon} ${MODS[t.module].name} · ${t.mt?'MT '+t.mt:'Demo'} · Teil ${t.teil}</span><p>${esc(q.q)}</p><div class="row"><a class="btn sm" href="#/t/${t.mt}/${t.module}/${t.teil}">Open</a><button class="btn sm ghost" data-act="bm" data-k="${esc(b)}">Remove</button></div></div>`).join('');
+}
+
+let SQ={q:'',mod:'',mt:'',teil:''};
+function searchResults(){
+  const q=SQ.q.trim().toLowerCase(),out=[];
+  BOOK.modelltests.forEach(m=>MODKEYS.forEach(k=>MODS[k].teile.forEach(te=>{
+    if(SQ.mod&&SQ.mod!==k)return;if(SQ.mt!==''&&+SQ.mt!==m.n)return;if(SQ.teil&&+SQ.teil!==te.n)return;
+    const label=`${MODS[k].name} Modelltest ${m.n} Teil ${te.n} ${te.goal}`.toLowerCase();
+    if(!q||label.includes(q)){const n=tasksFor(m.n,k,te.n).length;out.push(`<a class="card mcard" style="margin-top:10px;--mc:${modColor(k)}" href="#/t/${m.n}/${k}/${te.n}"><b>${MODS[k].icon} ${MODS[k].name} · Modelltest ${m.n} · Teil ${te.n}</b><div class="meta">${esc(te.goal)} · ${n?n+' task(s)':'no content yet'}</div></a>`);}})));
+  allTasks().forEach(t=>{if(SQ.mod&&SQ.mod!==t.module)return;if(SQ.mt!==''&&+SQ.mt!==t.mt)return;if(SQ.teil&&+SQ.teil!==t.teil)return;
+    const blob=[t.title,t.instruction,t.text,t.prompt].concat((t.questions||[]).map(x=>x.q+' '+(x.options||[]).join(' '))).join(' ').toLowerCase();
+    if(q&&blob.includes(q))out.push(`<a class="card mcard" style="margin-top:10px;--mc:${modColor(t.module)}" href="#/t/${t.mt}/${t.module}/${t.teil}"><b>${esc(t.title||'Task')}</b><div class="meta">Text match · ${MODS[t.module].name} · ${t.mt?'MT '+t.mt:'Demo'} · Teil ${t.teil}</div></a>`);});
+  return out.length?out.join(''):'<div class="empty" style="margin-top:12px">Nothing found.</div>';
+}
+function viewSearch(){
+  const opt=(arr,sel)=>arr.map(a=>`<option value="${a[0]}"${String(a[0])===String(sel)?' selected':''}>${a[1]}</option>`).join('');
+  return `<div class="pagehead"><h1>🔎 Search</h1><div class="meta">Find exercises by module, Modelltest and Teil, or by text.</div></div>
+  <div class="grid g4"><input type="search" id="sq" data-input="sq" value="${esc(SQ.q)}" placeholder="Search text or topic …" aria-label="Search">
+  <select data-change="sf" data-f="mod" aria-label="Module"><option value="">All modules</option>${opt(MODKEYS.map(k=>[k,MODS[k].name]),SQ.mod)}</select>
+  <select data-change="sf" data-f="mt" aria-label="Modelltest"><option value="">All Modelltests</option>${opt([[0,'Demo'],[1,'Modelltest 1'],[2,'Modelltest 2'],[3,'Modelltest 3'],[4,'Modelltest 4']],SQ.mt)}</select>
+  <select data-change="sf" data-f="teil" aria-label="Teil"><option value="">All Teile</option>${opt([1,2,3,4,5].map(n=>[n,'Teil '+n]),SQ.teil)}</select></div><div id="sr">${searchResults()}</div>`;
+}
+
+function viewVocab(){
+  const q=(SQ.v||'').toLowerCase();const list=S.vocab.map((v,i)=>({v,i})).filter(x=>!q||(x.v.de+' '+x.v.en+' '+(x.v.ur||'')).toLowerCase().includes(q));
+  let h=`<div class="pagehead"><h1>🗂 Vocabulary</h1><div class="meta">German – English (optional Urdu). Your own words; tap a card to flip.</div></div>
+  <div class="card"><div class="grid g4"><input type="text" id="vde" placeholder="Deutsch" lang="de"><input type="text" id="ven" placeholder="English"><input type="text" id="vur" placeholder="اردو (optional)" dir="rtl"><button class="btn" data-act="vadd">Add word</button></div>
+  <details style="margin-top:10px"><summary>Bulk import (one per line: <code>deutsch;english;urdu</code>)</summary><textarea id="vbulk" class="mono" style="min-height:90px"></textarea><div style="margin-top:8px"><button class="btn sm" data-act="vbulk">Import lines</button></div></details></div>
+  <div style="margin:12px 0"><input type="search" data-input="vq" value="${esc(SQ.v||'')}" placeholder="Search vocabulary …" aria-label="Search vocabulary"></div>`;
+  if(!list.length)return h+'<div class="empty">No words yet. Add words you meet while practising.</div>';
+  return h+'<div class="grid g4" id="vl">'+list.map(({v,i})=>`<div><button class="flip${FLIPPED.has(i)?' on':''}" data-act="flip" data-i="${i}" aria-label="Flip card"><div class="in"><div class="f" lang="de">${esc(v.de)}</div><div class="b"><div>${esc(v.en)}</div>${v.ur?`<div dir="rtl" style="margin-top:4px">${esc(v.ur)}</div>`:''}</div></div></button><div style="text-align:right"><button class="btn sm ghost" data-act="vdel" data-i="${i}" aria-label="Delete word">🗑</button></div></div>`).join('')+'</div>';
+}
+
+function viewPdf(){
+  let h=`<div class="pagehead"><h1>📄 PDF reference viewer</h1><div class="meta">For authorized personal study. The file is opened locally in your browser and is never uploaded.</div></div>
+  <div class="card"><label class="btn" style="cursor:pointer">Choose your book PDF<input type="file" accept="application/pdf" data-change="pdfload" hidden></label> <span class="meta">${PDF.url?'Loaded: '+esc(PDF.name):'No file loaded'}</span></div>
+  <h3 style="margin-top:16px">Jump to (printed page numbers)</h3><div class="chips">`;
+  BOOK.modelltests.forEach(m=>{MODKEYS.forEach(k=>{h+=`<button class="chip" data-act="pdfgo" data-p="${m[k]}">MT${m.n} ${MODS[k].name} ${m[k]}</button>`;});h+=`<button class="chip" data-act="pdfgo" data-p="${m.loesungen}">MT${m.n} Lösungen ${m.loesungen}</button>`;});
+  Object.keys(BOOK.back).forEach(k=>{h+=`<button class="chip" data-act="pdfgo" data-p="${BOOK.back[k]}">${k} ${BOOK.back[k]}</button>`;});
+  h+='</div><div style="margin-top:14px">';
+  if(PDF.url){h+=`<iframe class="pdf" title="PDF" src="${PDF.url}${PDF.page?'#page='+(PDF.page+BOOK.pdfOffset):''}"></iframe><p class="meta"><a href="${PDF.url}" target="_blank" rel="noopener">Open in a new tab</a> if the viewer stays empty.</p>`;}
+  else h+='<div class="empty">Choose your PDF above to read it next to the exercises. Printed page number + 1 = PDF page in your file.</div>';
+  return h+'</div>';
+}
+
+const TEMPLATE={tasks:[
+ {id:"mt1-lesen-t1-a",mt:1,module:"lesen",teil:1,title:"Lesen Teil 1",instruction:"(your authorized instruction text)",text:"(optional passage text)",
+  questions:[{n:1,q:"(statement or question)",options:["(option a)","(option b)","(option c)"],answer:1,explanation:"(optional)"}]},
+ {id:"mt1-hoeren-t1-a",mt:1,module:"hoeren",teil:1,title:"Hören Teil 1",audio:"Track 1",transcript:"(optional transcript)",
+  questions:[{n:1,q:"(question)",options:["(a)","(b)","(c)"],answer:"c"}]},
+ {id:"mt1-schreiben-t1",mt:1,module:"schreiben",teil:1,prompt:"(writing task text)"},
+ {id:"mt1-sprechen-t1",mt:1,module:"sprechen",teil:1,prompt:"(speaking topic)"}]};
+
+function viewContent(){
+  const cnt=C.tasks.length;
+  let h=`<div class="pagehead"><h1>🧩 Content</h1><div class="meta">${cnt} imported task(s). Stored only in your browser.</div></div>
+  <div class="note w"><b>Why is the book text not pre-filled?</b> The book is copyrighted and this site does not copy it. Add only content you are allowed to use – for example your own typed exercises from your copy, for personal study. Nothing is uploaded anywhere.</div>
+  <h2>Import tasks (JSON)</h2><div class="card"><textarea class="mono" id="imp" placeholder='{"tasks":[ … ]}'></textarea>
+  <div class="row" style="margin-top:10px"><button class="btn" data-act="import">Import</button><label class="btn ghost" style="cursor:pointer">Load .json file<input type="file" accept=".json,application/json" data-change="impfile" hidden></label><button class="btn ghost" data-act="tpl">Insert template</button></div></div>
+  <h2>Format</h2><div class="card"><p>Each task needs <code>id</code> (unique), <code>mt</code> (1–4), <code>module</code> (<code>lesen</code>, <code>hoeren</code>, <code>schreiben</code>, <code>sprechen</code>) and <code>teil</code>. Optional: <code>title, instruction, text, prompt, audio, transcript, questions</code>. In <code>answer</code> use a 0-based number or a letter (<code>"a"</code>). Questions without <code>answer</code> are never scored.</p><pre class="code">${esc(JSON.stringify(TEMPLATE,null,1))}</pre></div>
+  <h2>Audio for Hören</h2><div class="card"><ol><li>Get the book's audio files via the Klett-Augmented app (see the book, track list on p. ${BOOK.back.Trackliste}).</li><li>Open a Hören task and press <b>Attach audio file</b>; pick the matching file from your device.</li><li>The file stays on your device and is forgotten when you close the page. For a permanent setup, self-host the site and set <code>"audio":"audio/track01.mp3"</code> in the task.</li></ol></div>
+  <h2>Imported tasks</h2>`;
+  if(!cnt)h+='<div class="empty">Nothing imported yet.</div>';
+  else h+=`<div class="card tw"><table><thead><tr><th>ID</th><th>Where</th><th></th></tr></thead><tbody>`+C.tasks.map((t,i)=>`<tr><td>${esc(t.id)}</td><td>MT ${t.mt} · ${esc(t.module)} · Teil ${t.teil} · ${(t.questions||[]).length} Q</td><td><button class="btn sm ghost" data-act="deltask" data-i="${i}">Delete</button></td></tr>`).join('')+`</tbody></table><div style="margin-top:10px"><button class="btn sm danger" data-act="clearcontent">Delete all imported tasks</button></div></div>`;
+  return h;
+}
+
+function viewHelp(){
+  return `<div class="pagehead"><h1>💡 Tips &amp; Help</h1></div>
+  <h2>Exam facts <span class="srcb">(from the book, p. 6)</span></h2><div class="card tw"><table><thead><tr><th>Module</th><th>Time</th><th>Points</th></tr></thead><tbody>
+  ${MODKEYS.map(k=>`<tr><td>${MODS[k].icon} ${MODS[k].name}</td><td>${MODS[k].minutes} min${k==='sprechen'?' preparation per Teil':''}</td><td>${esc(MODS[k].points)}</td></tr>`).join('')}</tbody></table>
+  <p>30 Messpunkte = 100 Ergebnispunkte. Pass mark: 60 % (18 Messpunkte in Lesen and Hören).</p></div>
+  <h2>Score conversion <span class="srcb">(book table, p. 6)</span></h2><div class="card tw"><table><thead><tr><th>Messpunkte</th>${Object.keys(BOOK.conversion).sort((a,b)=>b-a).map(k=>`<th>${k}</th>`).join('')}</tr></thead><tbody><tr><td><b>Ergebnis</b></td>${Object.keys(BOOK.conversion).sort((a,b)=>b-a).map(k=>`<td>${BOOK.conversion[k]}</td>`).join('')}</tr></tbody></table></div>
+  <h2>Extra tips <span class="srcb">(additional learning material, not from the book)</span></h2><div class="grid g2">
+  <div class="card"><h3>📖 Lesen</h3><p>Underline key words in the questions first, then look for the same ideas in the text. Don't spend too long on one item.</p></div>
+  <div class="card"><h3>🎧 Hören</h3><p>Read the questions before the audio starts. Note numbers, names and negations while listening.</p></div>
+  <div class="card"><h3>✍️ Schreiben</h3><p>Answer every point in the task, use clear paragraphs and linking words, and keep 5 minutes to proof-read.</p></div>
+  <div class="card"><h3>🗣️ Sprechen</h3><p>Use your preparation time for key words only, not full sentences. Speak in a structure: opening – points – conclusion.</p></div></div>
+  <h2>Run &amp; deploy</h2><div class="card"><ol><li><b>Run:</b> open <code>goethe-b2-trainer.html</code> in any modern browser. No install, no server.</li><li><b>Deploy:</b> upload the single file to GitHub Pages, Netlify Drop or Cloudflare Pages as <code>index.html</code>.</li><li><b>Content:</b> add your authorized tasks under <a href="#/content">Content</a>, or paste them into the data block in the file.</li><li><b>Privacy:</b> everything is saved in your browser's local storage. There is no backend and no account.</li></ol>
+  <p class="meta">Code layout inside the file: <b>data</b> (JSON blocks at the top) · <b>scoring logic</b> (<code>Scoring</code>) · <b>store</b> · <b>UI components / views</b>.</p></div>`;
+}
+function viewNotFound(){return '<div class="empty">Page not found. <a href="#/">Go home</a></div>';}
+
+/* =================================================================
+   7) ROUTER + RENDER
+   ================================================================= */
+function route(){
+  const p=(location.hash||'#/').split('/').slice(1);
+  switch(p[0]){
+    case '':case undefined:return viewHome();
+    case 'm':return viewModule(p[1]);
+    case 't':{const n=+p[1];if(isNaN(n))return viewNotFound();if(p[2])return viewTestModule(n,p[2],p[3]?+p[3]:null);return viewTest(n);}
+    case 'dash':return viewDash();case 'bm':return viewBookmarks();case 'search':return viewSearch();
+    case 'vocab':return viewVocab();case 'pdf':return viewPdf();case 'content':return viewContent();case 'help':return viewHelp();
+    default:return viewNotFound();}
+}
+function render(keepScroll){const y=window.scrollY;$('#app').innerHTML=route();renderNav();if(keepScroll===true)window.scrollTo(0,y);}
+window.addEventListener('hashchange',()=>{if(location.hash==='#modules')return;render();window.scrollTo(0,0);$('#mob').classList.remove('open');$('#burger').setAttribute('aria-expanded','false');});
+
+/* =================================================================
+   8) EVENTS
+   ================================================================= */
+const nowStr=()=>new Date().toLocaleString();
+const H={
+  scrollmods(b,e){e.preventDefault();const el=$('#modules');if(el)el.scrollIntoView({behavior:'smooth'});},
+  pick(b){const a=ansStore(b.dataset.ctx),t=b.dataset.t;(a[t]=a[t]||{})[b.dataset.q]=+b.dataset.o;
+    if(b.dataset.ctx==='p'&&S.checked[t])delete S.checked[t];save();render(true);},
+  check(b){S.checked[b.dataset.t]=true;save();render(true);},
+  uncheck(b){delete S.checked[b.dataset.t];delete S.answers[b.dataset.t];save();render(true);},
+  done(b){const t=b.dataset.t;S.done[t]=!S.done[t];save();render(true);},
+  bm(b){const k=b.dataset.k,i=S.bookmarks.indexOf(k);i>=0?S.bookmarks.splice(i,1):S.bookmarks.push(k);save();render(true);},
+  teil(b){UI.teil=+b.dataset.n;UI.screen='work';render();window.scrollTo(0,0);},
+  mode(b){UI.mode=b.dataset.m;UI.screen='work';render(true);},
+  review(){UI.screen='review';render();window.scrollTo(0,0);},
+  backwork(){UI.screen='work';render();},
+  submit(){const [n,k]=UI.key.split('/').slice(2,4);const key=n+'-'+k,ex=S.exam[key];if(!ex)return;
+    const sum=Scoring.summary(examTasks(+n,k),ex.ans),off=Scoring.official(k,sum);ex.submitted=true;
+    S.results.unshift({mt:+n,mod:k,c:sum.correct,keyed:sum.keyed,total:sum.total,ep:off?off.ergebnis:null,date:nowStr()});S.results=S.results.slice(0,60);
+    TM['exam-'+key]&&(TM['exam-'+key].run=false);save();render();window.scrollTo(0,0);},
+  retake(){const [n,k]=UI.key.split('/').slice(2,4);delete S.exam[n+'-'+k];const t=TM['exam-'+n+'-'+k];if(t){t.left=t.total;t.run=false;}UI.screen='work';UI.teil=1;save();render();window.scrollTo(0,0);},
+  tstart(b){const t=TM[b.dataset.id];if(!t)return;if(t.left===0)t.left=t.total;t.run=!t.run;render(true);},
+  treset(b){const t=TM[b.dataset.id];if(!t)return;t.left=t.total;t.run=false;render(true);},
+  pdfgo(b){PDF.page=+b.dataset.p;location.hash='#/pdf';if(location.hash==='#/pdf')render();},
+  aseek(b){const a=document.getElementById('au-'+b.dataset.t);if(!a)return;const d=+b.dataset.d;if(d===0){a.currentTime=0;a.play();}else a.currentTime=Math.max(0,a.currentTime+d);},
+  aifb(b){const key=b.dataset.key,txt=S.writing[key]||'';if(!txt.trim()){toast('Write something first');return;}
+    copyText('Please give me feedback on my Goethe-Zertifikat B2 writing task (supplementary, not an official rating). Comment on: 1) task completion, 2) coherence and structure, 3) vocabulary, 4) grammar and spelling. Show corrected sentences and explain the main mistakes simply.\n\nMy text:\n'+txt,'Copied – paste it into a Claude chat');},
+  async recstart(b){const key=b.dataset.key;try{const st=await navigator.mediaDevices.getUserMedia({audio:true});const mr=new MediaRecorder(st),ch=[];
+      mr.ondataavailable=e=>ch.push(e.data);mr.onstop=()=>{st.getTracks().forEach(t=>t.stop());RECS[key]=URL.createObjectURL(new Blob(ch,{type:mr.mimeType||'audio/webm'}));REC=null;render(true);};
+      mr.start();REC={id:key,mr};render(true);}catch(err){toast('Recording not available here: '+(err.name||'error'));}},
+  recstop(){if(REC&&REC.mr.state!=='inactive')REC.mr.stop();},
+  deltask(b){C.tasks.splice(+b.dataset.i,1);saveC();render(true);},
+  clearcontent(){if(confirm('Delete all imported tasks?')){C.tasks=[];saveC();render(true);}},
+  tpl(){$('#imp').value=JSON.stringify(TEMPLATE,null,2);},
+  import(){doImport($('#imp').value);},
+  vadd(){const de=$('#vde').value.trim(),en=$('#ven').value.trim(),ur=$('#vur').value.trim();if(!de||!en){toast('Enter German and English');return;}S.vocab.unshift({de,en,ur});save();render(true);},
+  vbulk(){const ls=$('#vbulk').value.split('\n').map(l=>l.split(';').map(x=>x.trim())).filter(a=>a[0]&&a[1]);ls.forEach(a=>S.vocab.unshift({de:a[0],en:a[1],ur:a[2]||''}));save();toast(ls.length+' words added');render(true);},
+  vdel(b){S.vocab.splice(+b.dataset.i,1);FLIPPED.clear();save();render(true);},
+  flip(b){const i=+b.dataset.i;FLIPPED.has(i)?FLIPPED.delete(i):FLIPPED.add(i);b.classList.toggle('on');},
+  exportstate(){const j=JSON.stringify({state:S,content:C});$('#bk').value=j;copyText(j,'Backup copied');},
+  importstate(){try{const o=JSON.parse($('#bk').value);if(o.state)Object.assign(S,o.state);if(o.content&&Array.isArray(o.content.tasks)){C=o.content;saveC();}save();toast('Backup restored');render(true);}catch(e){toast('Invalid backup');}},
+  resetstate(){if(confirm('Reset all progress (imported tasks are kept)?')){Object.assign(S,{answers:{},checked:{},exam:{},results:[],bookmarks:[],done:{},writing:{},checks:{},notes:{}});save();render(true);}}
+};
+function doImport(txt){let o;try{o=JSON.parse(txt);}catch(e){toast('Invalid JSON: '+e.message);return;}
+  const arr=Array.isArray(o)?o:o.tasks;if(!Array.isArray(arr)){toast('Expected {"tasks":[…]}');return;}
+  const errs=[];let ok=0;arr.forEach((t,i)=>{
+    if(!t||!t.id||!MODS[t.module]||![1,2,3,4].includes(+t.mt)||!MODS[t.module].teile.some(x=>x.n===+t.teil)){errs.push('#'+(i+1)+' needs id, mt (1-4), module, valid teil');return;}
+    if(t.questions&&!t.questions.every(q=>Array.isArray(q.options)&&q.options.length>=2)){errs.push('#'+(i+1)+' (“'+t.id+'”): each question needs ≥2 options');return;}
+    t.mt=+t.mt;t.teil=+t.teil;const j=C.tasks.findIndex(x=>x.id===t.id);j>=0?C.tasks[j]=t:C.tasks.push(t);ok++;});
+  saveC();toast(ok+' task(s) imported'+(errs.length?' · '+errs.length+' skipped':''));if(errs.length)alert(errs.join('\n'));render(true);}
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const f=H[b.dataset.act];if(f)f(b,e);});
+document.addEventListener('change',e=>{const el=e.target.closest('[data-change]');if(!el)return;const a=el.dataset.change;
+  if(a==='chk'){S.checks[el.dataset.id]=el.checked;save();}
+  else if(a==='sf'){SQ[el.dataset.f]=el.value;$('#sr').innerHTML=searchResults();}
+  else if(a==='arate'){const au=document.getElementById('au-'+el.dataset.t);if(au)au.playbackRate=+el.value;}
+  else if(a==='aattach'){const f=el.files[0];if(!f)return;AUDIO[el.dataset.t]=URL.createObjectURL(f);toast('Audio attached: '+f.name);render(true);}
+  else if(a==='pdfload'){const f=el.files[0];if(!f)return;if(PDF.url)URL.revokeObjectURL(PDF.url);PDF.url=URL.createObjectURL(f);PDF.name=f.name;render(true);}
+  else if(a==='impfile'){const f=el.files[0];if(!f)return;f.text().then(doImport);}});
+let sv;document.addEventListener('input',e=>{const el=e.target;
+  if(el.dataset.bind){const st=el.dataset.bind==='writing'?S.writing:S.notes;st[el.dataset.key]=el.value;
+    if(el.dataset.bind==='writing'){const w=el.value.trim()?el.value.trim().split(/\s+/).length:0;const c=document.getElementById('wc-'+el.dataset.key);if(c)c.textContent=w+' words';}
+    clearTimeout(sv);sv=setTimeout(save,400);}
+  else if(el.dataset.input==='sq'){SQ.q=el.value;$('#sr').innerHTML=searchResults();}
+  else if(el.dataset.input==='vq'){SQ.v=el.value;const pos=el.selectionStart;render(true);const n=$('[data-input="vq"]');if(n){n.focus();n.setSelectionRange(pos,pos);}}});
+$('#burger').addEventListener('click',()=>{const m=$('#mob');const o=m.classList.toggle('open');$('#burger').setAttribute('aria-expanded',o);});
+function applyTheme(){if(S.theme)document.documentElement.setAttribute('data-theme',S.theme);else document.documentElement.removeAttribute('data-theme');}
+$('#themeBtn').addEventListener('click',()=>{const dark=S.theme?S.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;S.theme=dark?'light':'dark';save();applyTheme();});
+applyTheme();
+if(location.hash==='#modules')location.hash='#/';
+render();
+</script>
+</body>
+</html>
